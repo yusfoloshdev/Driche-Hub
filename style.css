@@ -83,20 +83,21 @@ img {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  transition: 0.3s;
 }
 
 .sidebar a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 10px;
   margin: 5px 0;
   border-radius: 6px;
-  transition: 0.3s;
 }
 
 .sidebar a:hover {
   background: #333;
 }
+
 
 .sidebar a.active {
   background: #ffffff;
@@ -150,6 +151,19 @@ footer {
 
 .btn:hover {
   background: #ddd;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  cursor: pointer;
 }
 
 
@@ -231,14 +245,20 @@ button {
 ========================= */
 
 @media (max-width: 768px) {
-
-  .sidebar {
-    left: -100%;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    overflow-x: auto;
+    .menu-btn {
+        display: block;
+    }
+    
+ .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 1000;
   }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
 
   header,
   main,

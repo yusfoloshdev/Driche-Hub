@@ -8,8 +8,16 @@
 </head>
 
 <body>
+    
+<script>
+function toggleMenu() {
+  document.querySelector(".sidebar").classList.toggle("active");
+}
+</script>
 
 <!-- SIDEBAR -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
 <nav class="sidebar">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
