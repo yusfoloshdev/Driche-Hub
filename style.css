@@ -23,7 +23,7 @@ body {
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
     ),
-    url("back.jpg");
+    url("back.jpg") no-repeat center center fixed;
 
   background-size: cover;
   background-position: center;
@@ -233,8 +233,7 @@ button {
 @media (max-width: 768px) {
 
   .sidebar {
-    position: relative;
-    left: -100%:
+    left: -100%;
     width: 100%;
     height: auto;
     flex-direction: row;
