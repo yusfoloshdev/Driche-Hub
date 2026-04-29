@@ -12,11 +12,23 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
-  background: #0f0f0f;
   color: #ffffff;
   line-height: 1.6;
+
+  /* Background image + dark overlay */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("images/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Container system */
@@ -222,6 +234,7 @@ button {
 
   .sidebar {
     position: relative;
+    left: -100%:
     width: 100%;
     height: auto;
     flex-direction: row;
