@@ -17,7 +17,6 @@ body {
   color: #ffffff;
   line-height: 1.6;
 
-  /* Background image + dark overlay */
   background: linear-gradient(
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
@@ -30,7 +29,7 @@ body {
 }
 
 /* =========================
-   CONTAINER SYSTEM
+   CONTAINER
 ========================= */
 
 .container {
@@ -83,8 +82,8 @@ img {
   display: flex;
   flex-direction: column;
 
-  /* IMPORTANT FIX: space for menu button */
-  padding: 90px 20px 20px;
+  /* spacing for top area */
+  padding: 70px 20px 20px;
 
   transition: transform 0.3s ease;
   z-index: 1000;
@@ -109,7 +108,7 @@ img {
 }
 
 /* =========================
-   PAGE LAYOUT OFFSET
+   PAGE OFFSET
 ========================= */
 
 header,
@@ -120,7 +119,7 @@ footer {
 }
 
 /* =========================
-   HERO SECTION
+   HERO
 ========================= */
 
 #hero {
@@ -164,16 +163,18 @@ footer {
   background: none;
   border: none;
   color: white;
+
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
+  left: auto;
 
   z-index: 2000;
   cursor: pointer;
 }
 
 /* =========================
-   CARDS (PORTFOLIO + SERVICES)
+   CARDS
 ========================= */
 
 .portfolio-grid,
@@ -198,7 +199,7 @@ footer {
 }
 
 /* =========================
-   PROJECT IMAGES
+   IMAGES
 ========================= */
 
 .project-card img {
@@ -214,7 +215,7 @@ footer {
 }
 
 /* =========================
-   FORM (CONTACT PAGE)
+   FORM
 ========================= */
 
 .contact-form {
@@ -257,9 +258,7 @@ button {
     transform: translateX(-100%);
     position: fixed;
     z-index: 1000;
-
-    /* keep spacing consistent */
-    padding-top: 90px;
+    padding-top: 70px;
   }
 
   .sidebar.active {
