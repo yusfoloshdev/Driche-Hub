@@ -82,7 +82,7 @@ img {
   background: #111;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 70px 20px 20px;
   transition: 0.3s;
 }
 
@@ -162,7 +162,7 @@ footer {
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 1001;
+  z-index: 2000;
   cursor: pointer;
 }
 
