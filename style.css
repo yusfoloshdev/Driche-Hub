@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
@@ -27,17 +26,18 @@ body {
 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Container system */
+/* =========================
+   CONTAINER SYSTEM
+========================= */
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
 }
-
 
 /* =========================
    TYPOGRAPHY
@@ -62,7 +62,6 @@ p {
   margin-bottom: 15px;
 }
 
-
 img {
   max-width: 100%;
   height: auto;
@@ -80,10 +79,15 @@ img {
   width: 220px;
   height: 100vh;
   background: #111;
+
   display: flex;
   flex-direction: column;
-  padding: 70px 20px 20px;
-  transition: 0.3s;
+
+  /* IMPORTANT FIX: space for menu button */
+  padding: 90px 20px 20px;
+
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 .sidebar a {
@@ -92,18 +96,17 @@ img {
   padding: 10px;
   margin: 5px 0;
   border-radius: 6px;
+  transition: 0.2s;
 }
 
 .sidebar a:hover {
   background: #333;
 }
 
-
 .sidebar a.active {
   background: #ffffff;
   color: #000;
 }
-
 
 /* =========================
    PAGE LAYOUT OFFSET
@@ -115,7 +118,6 @@ footer {
   margin-left: 240px;
   padding: 20px;
 }
-
 
 /* =========================
    HERO SECTION
@@ -133,7 +135,6 @@ footer {
 .hero-content p {
   max-width: 600px;
 }
-
 
 /* =========================
    BUTTONS
@@ -153,6 +154,10 @@ footer {
   background: #ddd;
 }
 
+/* =========================
+   MENU BUTTON (MOBILE)
+========================= */
+
 .menu-btn {
   display: none;
   font-size: 28px;
@@ -160,12 +165,12 @@ footer {
   border: none;
   color: white;
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
+
   z-index: 2000;
   cursor: pointer;
 }
-
 
 /* =========================
    CARDS (PORTFOLIO + SERVICES)
@@ -192,9 +197,8 @@ footer {
   transform: translateY(-5px);
 }
 
-
 /* =========================
-   IMAGES
+   PROJECT IMAGES
 ========================= */
 
 .project-card img {
@@ -239,26 +243,28 @@ button {
   color: black;
 }
 
-
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    
- .sidebar {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .sidebar {
     transform: translateX(-100%);
     position: fixed;
     z-index: 1000;
+
+    /* keep spacing consistent */
+    padding-top: 90px;
   }
 
   .sidebar.active {
     transform: translateX(0);
   }
-
 
   header,
   main,
@@ -269,5 +275,4 @@ button {
   .hero-content h2 {
     font-size: 2rem;
   }
-
 }
